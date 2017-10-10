@@ -1,5 +1,6 @@
 body {
     background: #1f2d3b;
+    font-size: 14px;
 }
  
 .clearfix:after {
@@ -20,16 +21,19 @@ body {
  	height: 100%;
  }
 
+ .breadcrumbs > ul {
+    padding-left: 10px;
+ }
+
 .breadcrumbs > ul > li {
 	height: 100%;
 	display: inline;
 	float: left;
-	margin: 0 10px;
+	margin: 10px 10px 10px 0;
 }
 
-.breadcrumbs > ul > li:after {
-	color: #919191;
-	content: "  > ";
+.droppedCrumb:before {
+	
 }
 
 .breadcrumbs > ul > li > a {
@@ -38,6 +42,17 @@ body {
 
 .breadcrumbs > ul > li > a:hover {
 	text-decoration: none;
+}
+
+#top, 
+#sub {
+    display: none;
+}
+
+#top:before,
+#sub:before {
+    color: #919191;
+    content: "  > ";
 }
 
  /*----- Menu Outline -----*/
@@ -66,7 +81,6 @@ body {
     float: left;
     display: inline-block;
     position: relative;
-    font-size: 19px;
     border-right: 1px solid #919191;
 }
  
